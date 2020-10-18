@@ -1,7 +1,7 @@
 inr = float(input('What is the amount of INR you wish to convert?'))
 print('\n')
-print('Please choose from this option \n\r' + '\n\r' + '0:USD' + '\n\r' + '1:EURO' + '\n\r' + '2:YEN' + '\n\r' + '3:YUAN' + '4:AED' + '\n\r' + '5:SGD' + '\n\r' + '6:GBP' + '\n\r')
-type_curr = int(input(''))
+print('Please choose from this option \n\r' + '\n\r' + '0:USD' + '\n\r' + '1:EURO' + '\n\r' + '2:YEN' + '\n\r' + '3:YUAN' + '\n\r' + '4:AED' + '\n\r' + '5:SGD' + '\n\r' + '6:GBP' + '\n\r')
+type_curr = int(input('Choose the currency mode:'))
 
 def USD():
     return inr * 0.014
