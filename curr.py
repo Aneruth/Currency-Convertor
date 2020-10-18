@@ -1,5 +1,7 @@
-inr = float(input('What is the amount of INR you wish to convert?\n\r'))
-curr_ = int(input('choose which currency'+ '\r\n' + '0:USD'+ '\r\n' + '1:EURO' + '\r\n' + '2:YEN' + '\r\n' + '3:YUAN' + '\r\n' + '4:AED' + '\r\n' + '5:SGD' + '\r\n' + '6:GBP\n\r'))
+inr = float(input('What is the amount of INR you wish to convert?'))
+print('\n')
+print('Please choose from this option \n\r' + '\n\r' + '0:USD' + '\n\r' + '1:EURO' + '\n\r' + '2:YEN' + '\n\r' + '3:YUAN' + '4:AED' + '\n\r' + '5:SGD' + '\n\r' + '6:GBP' + '\n\r')
+type_curr = int(input(''))
 
 def USD():
     return inr * 0.014
@@ -22,7 +24,7 @@ def SGD():
 def GBP():
     return inr * 0.011
 
-def convert_to(curr_):
+def convert_to(inr):
     switcher={
         0:USD,
         1:EURO,
@@ -32,6 +34,11 @@ def convert_to(curr_):
         5:SGD,
         6:GBP
         }
-    func = switcher.get(curr_,lambda:"Invalid Entry")
-    print('The converted amount is',func(),format(switcher))
-convert_to(curr_)
+    for i in switcher.items():
+        if i == type_curr:
+            i = switcher.get(type_curr)
+            
+    func = switcher.get(inr)
+    print('You chose option {0}'.format(type_curr))
+    print('The amount you converted is',func())
+convert_to(type_curr)
