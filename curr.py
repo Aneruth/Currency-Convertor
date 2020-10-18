@@ -32,7 +32,6 @@ def convert_to(curr_):
         5:SGD,
         6:GBP
         }
-
     func = switcher.get(curr_,lambda:"Invalid Entry")
     print('The converted amount is',func(),format(switcher))
 convert_to(curr_)
