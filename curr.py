@@ -1,7 +1,5 @@
 inr = float(input('What is the amount of INR you wish to convert?'))
-print('\n')
 print('Please choose from this option \n\r' + '\n\r' + '0:USD' + '\n\r' + '1:EURO' + '\n\r' + '2:YEN' + '\n\r' + '3:YUAN' + '\n\r' + '4:AED' + '\n\r' + '5:SGD' + '\n\r' + '6:GBP' + '\n\r')
-type_curr = int(input('Choose the currency mode:') + '\n')
 
 def USD():
     return inr * 0.014
@@ -33,13 +31,7 @@ def convert_to(inr):
         4:AED,
         5:SGD,
         6:GBP
-        }
-    for i in switcher.items():
-        if i == type_curr:
-            i = switcher.get(type_curr)
-            
+        }        
     func = switcher.get(inr)
-    print('\n')
-    print('You chose option {0}'.format(type_curr))
     print('The amount you converted is',func())
 convert_to(type_curr)
